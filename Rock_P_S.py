@@ -1,8 +1,9 @@
 import random
 
 def play():
-    user = input("Choose:\n'r' for Rock, 'p' for Paper, 's' for Scissors\n")
-    computer = random.choice(['r', 'p', 's'])
+    user = input("Choose:\n'R' for Rock, 'P' for Paper, 'S' for Scissors\n").upper()
+    computer = random.choice(['R', 'P', 'S'])
+    print("Computer Chose " + computer)
 
     if user == computer:
         return "It's a Tie"
@@ -14,8 +15,7 @@ def play():
         return 'You won!'
 
 def is_win(player, opponent):
-    if (player == 'r' and opponent == 's') or (player == 's' and opponent == 'p') or (player == 'p' and opponent == 'r'):
+    if (player == 'R' and opponent == 'S') or (player == 'S' and opponent == 'P') or (player == 'P' and opponent == 'P'):
         return True
-
 
 print(play())
